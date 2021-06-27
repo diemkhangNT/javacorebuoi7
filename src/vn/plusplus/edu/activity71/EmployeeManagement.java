@@ -112,25 +112,21 @@ public class EmployeeManagement {
     }
     // Tìm nhân viên có tiền lương cao nhất/thấp nhất
     public String findESmax(){
-        int j=0;
-        long max = employees[0].calculateSalary();
+        Employee max = employees[0];
         for(int i=0;i<employees.length;i++){
-            if(max < employees[i].calculateSalary()){
-                max = employees[i].calculateSalary();
-                j = i;
+            if(max.calculateSalary() < employees[i].calculateSalary()){
+                max= employees[i];
             }
         }
-        return "Name: '"+employees[j].getName()+'\''+", Age: "+employees[j].getAge()+", CMT: "+employees[j].getIdentificationNumber();
+        return "Name: '"+max.getName()+'\''+", Age: "+max.getAge()+", CMT: "+max.getIdentificationNumber();
     }
     public String findESmin(){
-        int j=0;
-        long min = employees[0].calculateSalary();
+        Employee min = employees[0];
         for(int i=0;i<employees.length;i++){
-            if(min > employees[i].calculateSalary()){
-                min = employees[i].calculateSalary();
-                j=i;
+            if(min.calculateSalary() > employees[i].calculateSalary()){
+                min = employees[i];
             }
         }
-        return "Name: '"+employees[j].getName()+"\'"+", Age: "+employees[j].getAge()+", CMT: "+employees[j].getIdentificationNumber();
+        return "Name: '"+min.getName()+"\'"+", Age: "+min.getAge()+", CMT: "+min.getIdentificationNumber();
     }
 }

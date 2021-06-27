@@ -1,7 +1,7 @@
 package vn.plusplus.edu.activity71;
 
 public class FulltimeEmployee extends Employee {
-    long MEAL_ALLOWANCE = 2000000;
+    final long MEAL_ALLOWANCE = 2000000;
     private int totalWorkingDays; // So ngay lam viec
     private long dailySalary; // Luong theo ngay
 
@@ -26,9 +26,8 @@ public class FulltimeEmployee extends Employee {
     }
 
     public FulltimeEmployee(String name, int age, String identificationNumber,
-                            long MEAL_ALLOWANCE, int totalWorkingDays, long dailySalary) {
+                             int totalWorkingDays, long dailySalary) {
         super(name, age, identificationNumber);
-        this.MEAL_ALLOWANCE = MEAL_ALLOWANCE;
         this.totalWorkingDays = totalWorkingDays;
         this.dailySalary = dailySalary;
     }

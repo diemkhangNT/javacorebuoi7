@@ -39,7 +39,7 @@ public abstract class Employee {
     public abstract long getSalaryRate();
     public abstract int getWorkingCount();
     public long calculateSalary(){
-        return getWorkingCount()*getSalaryRate()+getMealAllowance();
+        return getWorkingCount() * getSalaryRate() + getMealAllowance();
     }
 
 }
